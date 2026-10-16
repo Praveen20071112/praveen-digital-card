@@ -1,72 +1,45 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101827">
-  <title>Praveen | Digital Card</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      color: white;
-      background: linear-gradient(145deg, #101827, #163c4a);
-    }
-    .card {
-      width: 100%;
-      max-width: 380px;
-      padding: 30px 22px;
-      text-align: center;
-      background: #182536;
-      border: 1px solid #3d5967;
-      border-radius: 24px;
-      box-shadow: 0 18px 50px #0005;
-    }
-    .logo {
-      width: 82px;
-      height: 82px;
-      margin: auto;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: #24c6a5;
-      color: #102027;
-      font-size: 30px;
-      font-weight: bold;
-    }
-    h1 { margin-bottom: 6px; }
-    .subtitle { color: #a9c0ce; margin-bottom: 25px; }
-    a {
-      display: block;
-      padding: 14px;
-      margin-top: 12px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #102027;
-      background: #24c6a5;
-    }
-    a.secondary { background: #e5eef5; }
-    .note { color: #a9c0ce; font-size: 12px; margin-top: 24px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0d">
+<title>Kemaruban Praveen | Digital Card</title>
+<style>
+:root { color-scheme: dark; --red:#ef3038; --bg:#09090b; --panel:#151518; --muted:#b9b9c0; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:radial-gradient(circle at 50% 0%,#391014 0,#151013 30%,var(--bg) 70%); color:#fff; }
+.card { width:min(100%,430px); overflow:hidden; border:1px solid #5e2025; border-radius:26px; background:linear-gradient(155deg,#1b1b20,#0e0e11 65%); box-shadow:0 24px 80px #0009; }
+.top { height:8px; background:linear-gradient(90deg,#8f1018,var(--red),#ff777b); }
+.inner { padding:28px; }
+.profile { width:116px; height:116px; object-fit:cover; object-position:center 30%; border-radius:50%; border:3px solid var(--red); box-shadow:0 0 0 6px #ef30381a; display:block; margin:0 auto 18px; }
+.kicker { text-align:center; color:#ff6268; letter-spacing:.22em; font-size:11px; font-weight:800; }
+h1 { text-align:center; font-size:29px; line-height:1.15; margin:10px 0 7px; }
+.subtitle { text-align:center; color:var(--muted); margin:0 0 24px; font-size:14px; }
+.links { display:grid; gap:10px; }
+a.btn { display:flex; align-items:center; justify-content:center; text-align:center; min-height:48px; padding:12px 14px; border-radius:13px; border:1px solid #36363c; color:#fff; text-decoration:none; font-weight:650; background:#202025; }
+a.primary { background:var(--red); border-color:var(--red); color:white; }
+a.btn:hover { filter:brightness(1.12); }
+.note { color:#9999a2; text-align:center; font-size:11px; margin:20px 0 0; }
+</style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo">KP</div>
-    <h1>Kemaruban Praveen</h1>
-    <p class="subtitle">My Digital Visiting Card</p>
-
-    <a href="tel:+94770841987">📞 Call Me</a>
-    <a class="secondary" href="https://wa.me/94770841987">💬 WhatsApp</a>
-    <a class="secondary" href="https://wa.me/94770841987?text=Hi%20Praveen">👋 Say Hello</a>
-
-    <p class="note">Tap a button to connect with me.</p>
-  </main>
+<main class="card">
+<div class="top"></div>
+<div class="inner">
+<img class="profile" src="profile.jpg" alt="Profile photo of Kemaruban Praveen">
+<div class="kicker">DIGITAL VISITING CARD</div>
+<h1>Kemaruban Praveen</h1>
+<p class="subtitle">Personal profile · Sri Lanka</p>
+<div class="links">
+<a class="btn primary" href="Kemaruban_Praveen.vcf" download>＋ Save Contact</a>
+<a class="btn" href="tel:+94770841987">☎ Call +94770841987</a>
+<a class="btn" href="https://wa.me/94770841987" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn" href="https://www.instagram.com/praveen04_2007?psln=em14cWI3M2lhZHFm" target="_blank" rel="noopener">Instagram</a>
+<a class="btn" href="https://www.facebook.com/share/1Gvh42V4pA/" target="_blank" rel="noopener">Facebook</a>
+</div>
+<p class="note">Scan the QR code to open this card once it is hosted online.</p>
+</div>
+</main>
 </body>
 </html>
