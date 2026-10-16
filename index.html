@@ -2,457 +2,454 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071521">
-  <meta name="description" content="Kemaruban Praveen's digital visiting card. Contact me, connect on social media, or save my contact.">
-  <title>Kemaruban Praveen | Digital Card</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Kemaruban Praveen's premium digital visiting card">
+<title>Kemaruban Praveen | Digital Card</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+:root {
+  --red: #ff1738;
+  --red-dark: #a90020;
+  --black: #080808;
+  --panel: #111111;
+  --white: #f7f7f7;
+  --muted: #a5a5a5;
+}
 
-    :root {
-      --background: #06111d;
-      --card: #0c1d2b;
-      --teal: #28e0c1;
-      --text: #f4f8fc;
-      --muted: #9bafbd;
-      --border: rgba(255, 255, 255, 0.09);
-    }
+* { box-sizing: border-box; }
 
-    body {
-      min-height: 100vh;
-      padding: 28px 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, #123748 0%, transparent 42%),
-        var(--background);
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 22px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, #361016 0%, transparent 48%),
+    #080808;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    .card {
-      width: 100%;
-      max-width: 430px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      background: linear-gradient(160deg, #102637, var(--card) 55%, #081722);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
-    }
+.card {
+  width: 100%;
+  max-width: 390px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-radius: 23px;
+  background: linear-gradient(155deg, #171717, #080808 65%);
+  box-shadow: 0 15px 55px #000, 0 0 22px #ff17381a;
+}
 
-    .top-line {
-      height: 5px;
-      background: linear-gradient(90deg, #28e0c1, #5aa7ff, #28e0c1);
-    }
+.card::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #700014, var(--red), #ff7184);
+}
 
-    .content {
-      padding: 30px 23px 25px;
-    }
+.inner {
+  padding: 23px 19px 18px;
+}
 
-    .brand {
-      text-align: center;
-      color: var(--teal);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 23px;
-    }
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2.2px;
+}
 
-    .avatar {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto 17px;
-      border: 2px solid var(--teal);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #173b4a, #0a1723);
-      box-shadow: 0 0 25px rgba(40, 224, 193, 0.13);
-      overflow: hidden;
-      color: var(--teal);
-      font-size: 40px;
-      font-weight: 700;
-    }
+.nfc {
+  border: 1px solid #472028;
+  border-radius: 20px;
+  padding: 6px 9px;
+  letter-spacing: 1px;
+}
 
-    /* Replace the placeholder with your photo later if you want. */
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.profile {
+  text-align: center;
+  padding: 17px 0 15px;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 27px;
-      line-height: 1.25;
-      letter-spacing: 0.2px;
-    }
+.avatar {
+  width: 94px;
+  height: 94px;
+  margin: 0 auto 13px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff173833;
+  background: #1b1b1b;
+}
 
-    .subtitle {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 8px;
-    }
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .location {
-      text-align: center;
-      color: var(--teal);
-      font-size: 12px;
-      margin-top: 11px;
-    }
+h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: -.6px;
+}
 
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 25px 0;
-    }
+h1 span { color: var(--red); }
 
-    .section-title {
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
+.subtitle {
+  margin: 8px 0 0;
+  font-size: 10px;
+  color: #c5c5c5;
+  letter-spacing: 3px;
+}
 
-    .personal-box {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 15px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.025);
-    }
+.location {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
 
-    .birthday-icon {
-      width: 43px;
-      height: 43px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 12px;
-      background: rgba(40, 224, 193, 0.1);
-      font-size: 21px;
-    }
+.line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #63202b, #333, transparent);
+  margin: 7px 0 16px;
+}
 
-    .label {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-      margin-bottom: 5px;
-    }
+.birthday {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 13px;
+  margin-bottom: 17px;
+  border: 1px solid #302326;
+  border-radius: 13px;
+  background: #ffffff05;
+}
 
-    .value {
-      font-size: 14px;
-      font-weight: 600;
-    }
+.birthday-icon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--red);
+  background: #ff173817;
+  font-size: 21px;
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 11px;
-    }
+.label {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
 
-    .contact-btn {
-      min-height: 52px;
-      padding: 12px 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      background: rgba(255, 255, 255, 0.035);
-      color: var(--text);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
+.date {
+  font-size: 14px;
+  font-weight: bold;
+}
 
-    .contact-btn:active {
-      transform: scale(0.97);
-      border-color: var(--teal);
-    }
+.section-title {
+  color: #b9b9b9;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 0 0 11px;
+}
 
-    .contact-btn.primary {
-      grid-column: 1 / -1;
-      background: var(--teal);
-      color: #04151b;
-      border-color: var(--teal);
-      font-weight: 700;
-    }
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
 
-    .btn-icon {
-      font-size: 18px;
-    }
+.link {
+  min-height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 7px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #4b2027;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #181818, #0b0b0b);
+  transition: .2s;
+}
 
-    .qr-box {
-      text-align: center;
-      padding: 18px 12px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.025);
-    }
+.link:active, .action:active {
+  transform: scale(.97);
+}
 
-    .qr-box img {
-      width: 155px;
-      height: 155px;
-      display: block;
-      margin: 0 auto 13px;
-      padding: 7px;
-      border-radius: 10px;
-      background: white;
-    }
+.link .emoji {
+  color: var(--red);
+  font-size: 16px;
+}
 
-    .qr-heading {
-      font-size: 14px;
-      font-weight: 700;
-    }
+.link.whatsapp {
+  background: linear-gradient(100deg, #25090f, #100b0c);
+  border-color: var(--red-dark);
+}
 
-    .qr-caption {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.6;
-    }
+.link.facebook {
+  grid-column: 1 / -1;
+}
 
-    .action-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 11px;
-      margin-top: 17px;
-    }
+.qr-section {
+  margin-top: 17px;
+  padding: 15px 10px;
+  border: 1px solid #382027;
+  border-radius: 15px;
+  background: #ffffff04;
+  text-align: center;
+}
 
-    .action-btn {
-      min-height: 48px;
-      border: 1px solid rgba(40, 224, 193, 0.4);
-      border-radius: 12px;
-      background: rgba(40, 224, 193, 0.08);
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
+.qr-section img {
+  width: 112px;
+  height: 112px;
+  display: block;
+  padding: 5px;
+  margin: 12px auto 9px;
+  border-radius: 10px;
+  background: white;
+}
 
-    .footer {
-      text-align: center;
-      margin-top: 24px;
-      color: #738a99;
-      font-size: 10px;
-      letter-spacing: 1.1px;
-    }
+.qr-title {
+  font-size: 13px;
+  font-weight: bold;
+}
 
-    @media (max-width: 350px) {
-      .content {
-        padding: 24px 16px;
-      }
+.qr-caption {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
 
-      h1 {
-        font-size: 23px;
-      }
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 12px;
+}
 
-      .contact-btn {
-        font-size: 12px;
-      }
-    }
-  </style>
+.action {
+  min-height: 43px;
+  border: 1px solid var(--red);
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(120deg, #3a0b13, #151010);
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action span { color: var(--red); }
+
+.signature {
+  text-align: center;
+  color: var(--red);
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: .5px;
+  margin-top: 19px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 16px;
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.footer::before, .footer::after {
+  content: "";
+  height: 1px;
+  width: 24px;
+  background: var(--red-dark);
+}
+
+@media (max-width: 350px) {
+  .inner { padding: 19px 13px 15px; }
+  h1 { font-size: 22px; }
+  .link { font-size: 11px; }
+}
+</style>
 </head>
 
 <body>
-  <main class="card">
-    <div class="top-line"></div>
+<main class="card">
+  <div class="inner">
 
-    <div class="content">
-      <div class="brand">Digital Visiting Card</div>
-
-      <div class="avatar" id="avatar">
-        <span>KP</span>
-      </div>
-
-      <h1>Kemaruban Praveen</h1>
-      <p class="subtitle">Personal Digital Card</p>
-      <p class="location">📍 Jaffna, Sri Lanka</p>
-
-      <div class="divider"></div>
-
-      <!-- Only personal detail shown here is birthday -->
-      <section>
-        <h2 class="section-title">Personal Details</h2>
-
-        <div class="personal-box">
-          <div class="birthday-icon">🎂</div>
-          <div>
-            <span class="label">Date of Birth</span>
-            <div class="value">11 December 2007</div>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section>
-        <h2 class="section-title">Contact & Social</h2>
-
-        <div class="contact-grid">
-          <a class="contact-btn primary"
-             href="https://wa.me/94770841987"
-             target="_blank" rel="noopener">
-            <span class="btn-icon">☘</span>
-            WhatsApp Me
-          </a>
-
-          <a class="contact-btn" href="tel:+94770841987">
-            <span class="btn-icon">📞</span>
-            Call Me
-          </a>
-
-          <a class="contact-btn"
-             href="mailto:kemarubanpraveen@gmail.com">
-            <span class="btn-icon">✉️</span>
-            Email Me
-          </a>
-
-          <a class="contact-btn"
-             href="https://www.instagram.com/praveen04_2007?vrfl=em14cWI3M2lhZHFm"
-             target="_blank" rel="noopener">
-            <span class="btn-icon">📸</span>
-            Instagram
-          </a>
-
-          <a class="contact-btn"
-             href="https://www.facebook.com/share/18HhTd3jgX/"
-             target="_blank" rel="noopener">
-            <span class="btn-icon">👤</span>
-            Facebook
-          </a>
-        </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <section>
-        <h2 class="section-title">Scan My Card</h2>
-
-        <div class="qr-box">
-          <img
-            id="qrCode"
-            alt="QR code for my digital visiting card"
-            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpraveen20071112.github.io%2Fpraveen-digital-card%2F">
-
-          <p class="qr-heading">My Digital Visiting Card</p>
-          <p class="qr-caption">
-            Scan this QR code to open my contact card.
-          </p>
-        </div>
-
-        <div class="action-buttons">
-          <button class="action-btn" id="saveContact">
-            ＋ Save Contact
-          </button>
-
-          <button class="action-btn" id="shareCard">
-            ↗ Share Card
-          </button>
-        </div>
-      </section>
-
-      <div class="footer">
-        CONNECT • SAVE • SHARE
-      </div>
+    <div class="topline">
+      <span>PERSONAL DIGITAL CARD</span>
+      <span class="nfc">))) NFC</span>
     </div>
-  </main>
 
-  <script>
-    const contact = {
-      name: "Kemaruban Praveen",
-      phone: "+94770841987",
-      email: "kemarubanpraveen@gmail.com",
-      address: "Jaffna, Sri Lanka",
-      website: "https://praveen20071112.github.io/praveen-digital-card/",
-      birthday: "20071211"
-    };
+    <header class="profile">
+      <div class="avatar">
+        <img src="./profile.jpg" alt="Kemaruban Praveen"
+             onerror="this.style.display='none';this.parentElement.textContent='KP';this.parentElement.style.display='grid';this.parentElement.style.placeItems='center';this.parentElement.style.fontSize='30px';this.parentElement.style.color='#ff1738'">
+      </div>
 
-    // Generate QR from the current website address.
-    const qrImage = document.getElementById("qrCode");
-    qrImage.src =
-      "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
-      encodeURIComponent(window.location.href);
+      <h1>Kemaruban <span>Praveen</span></h1>
+      <p class="subtitle">DIGITAL VISITING CARD</p>
+      <p class="location">📍 Jaffna, Sri Lanka</p>
+    </header>
 
-    // Save contact as a vCard file.
-    document.getElementById("saveContact").addEventListener("click", function () {
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "FN:" + contact.name,
-        "TEL;TYPE=CELL:" + contact.phone,
-        "EMAIL:" + contact.email,
-        "ADR;TYPE=HOME:;;" + contact.address + ";;;;",
-        "BDAY:" + contact.birthday,
-        "URL:" + contact.website,
-        "END:VCARD"
-      ].join("\r\n");
+    <div class="line"></div>
 
-      const blob = new Blob([vcard], {
-        type: "text/vcard;charset=utf-8"
-      });
+    <section class="birthday">
+      <div class="birthday-icon">🎂</div>
+      <div>
+        <span class="label">Date of Birth</span>
+        <div class="date">11 December 2007</div>
+      </div>
+    </section>
 
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Kemaruban-Praveen.vcf";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      URL.revokeObjectURL(url);
-    });
+    <section>
+      <h2 class="section-title">LET'S CONNECT</h2>
 
-    // Share the live website.
-    document.getElementById("shareCard").addEventListener("click", async function () {
-      const shareData = {
-        title: "Kemaruban Praveen - Digital Card",
-        text: "Here is my digital visiting card.",
-        url: contact.website
-      };
+      <div class="links">
+        <a class="link whatsapp"
+           href="https://wa.me/94770841987"
+           target="_blank" rel="noopener">
+          <span class="emoji">◉</span> WhatsApp
+        </a>
 
-      if (navigator.share) {
-        try {
-          await navigator.share(shareData);
-        } catch (error) {
-          if (error.name !== "AbortError") {
-            copyWebsiteLink();
-          }
-        }
-      } else {
-        copyWebsiteLink();
-      }
-    });
+        <a class="link" href="tel:+94770841987">
+          <span class="emoji">☎</span> Call
+        </a>
 
-    function copyWebsiteLink() {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(contact.website)
-          .then(function () {
-            alert("Website link copied!");
-          })
-          .catch(function () {
-            window.prompt("Copy your digital card link:", contact.website);
-          });
-      } else {
-        window.prompt("Copy your digital card link:", contact.website);
-      }
+        <a class="link"
+           href="mailto:kemarubanpraveen@gmail.com">
+          <span class="emoji">✉</span> Email
+        </a>
+
+        <a class="link"
+           href="https://www.instagram.com/praveen04_2007?vrfl=em14cWI3M2lhZHFm"
+           target="_blank" rel="noopener">
+          <span class="emoji">◎</span> Instagram
+        </a>
+
+        <a class="link facebook"
+           href="https://www.facebook.com/share/18HhTd3jgX/"
+           target="_blank" rel="noopener">
+          <span class="emoji">f</span> Facebook
+        </a>
+      </div>
+    </section>
+
+    <section class="qr-section">
+      <div class="topline" style="justify-content:center">
+        <span>SCAN · SAVE · CONNECT</span>
+      </div>
+
+      <img id="qrCode" alt="QR code for my digital visiting card">
+
+      <div class="qr-title">My Digital Visiting Card</div>
+      <p class="qr-caption">Scan the code to open my live contact card.</p>
+
+      <div class="actions">
+        <button class="action" id="saveContact">
+          <span>＋</span> Save Contact
+        </button>
+        <button class="action" id="shareCard">
+          <span>↗</span> Share Card
+        </button>
+      </div>
+    </section>
+
+    <div class="signature">Kemaruban Praveen</div>
+
+    <footer class="footer">CONNECT · SAVE · SHARE</footer>
+  </div>
+</main>
+
+<script>
+const contact = {
+  name: "Kemaruban Praveen",
+  phone: "+94770841987",
+  email: "kemarubanpraveen@gmail.com",
+  address: "Jaffna, Sri Lanka",
+  website: "https://praveen20071112.github.io/praveen-digital-card/",
+  birthday: "20071211"
+};
+
+// QR code always points to the live website.
+document.getElementById("qrCode").src =
+  "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" +
+  encodeURIComponent(contact.website);
+
+document.getElementById("saveContact").addEventListener("click", () => {
+  const escapeVCard = value =>
+    value.replace(/\\/g, "\\\\")
+         .replace(/\n/g, "\\n")
+         .replace(/,/g, "\\,")
+         .replace(/;/g, "\\;");
+
+  const vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:" + escapeVCard(contact.name),
+    "TEL;TYPE=CELL:" + contact.phone,
+    "EMAIL:" + contact.email,
+    "ADR;TYPE=HOME:;;Jaffna;;;;Sri Lanka",
+    "BDAY:" + contact.birthday,
+    "URL:" + contact.website,
+    "END:VCARD"
+  ].join("\r\n") + "\r\n";
+
+  const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Kemaruban_Praveen.vcf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+
+document.getElementById("shareCard").addEventListener("click", async () => {
+  const data = {
+    title: "Kemaruban Praveen | Digital Card",
+    text: "Check out my digital visiting card.",
+    url: contact.website
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(data);
+      return;
+    } catch (error) {
+      if (error.name === "AbortError") return;
     }
-  </script>
+  }
+
+  try {
+    await navigator.clipboard.writeText(contact.website);
+    alert("Website link copied!");
+  } catch {
+    window.prompt("Copy your digital card link:", contact.website);
+  }
+});
+</script>
 </body>
 </html>
