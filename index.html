@@ -1,45 +1,458 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0b0d">
-<title>Kemaruban Praveen | Digital Card</title>
-<style>
-:root { color-scheme: dark; --red:#ef3038; --bg:#09090b; --panel:#151518; --muted:#b9b9c0; }
-* { box-sizing:border-box; }
-body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:radial-gradient(circle at 50% 0%,#391014 0,#151013 30%,var(--bg) 70%); color:#fff; }
-.card { width:min(100%,430px); overflow:hidden; border:1px solid #5e2025; border-radius:26px; background:linear-gradient(155deg,#1b1b20,#0e0e11 65%); box-shadow:0 24px 80px #0009; }
-.top { height:8px; background:linear-gradient(90deg,#8f1018,var(--red),#ff777b); }
-.inner { padding:28px; }
-.profile { width:116px; height:116px; object-fit:cover; object-position:center 30%; border-radius:50%; border:3px solid var(--red); box-shadow:0 0 0 6px #ef30381a; display:block; margin:0 auto 18px; }
-.kicker { text-align:center; color:#ff6268; letter-spacing:.22em; font-size:11px; font-weight:800; }
-h1 { text-align:center; font-size:29px; line-height:1.15; margin:10px 0 7px; }
-.subtitle { text-align:center; color:var(--muted); margin:0 0 24px; font-size:14px; }
-.links { display:grid; gap:10px; }
-a.btn { display:flex; align-items:center; justify-content:center; text-align:center; min-height:48px; padding:12px 14px; border-radius:13px; border:1px solid #36363c; color:#fff; text-decoration:none; font-weight:650; background:#202025; }
-a.primary { background:var(--red); border-color:var(--red); color:white; }
-a.btn:hover { filter:brightness(1.12); }
-.note { color:#9999a2; text-align:center; font-size:11px; margin:20px 0 0; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071521">
+  <meta name="description" content="Kemaruban Praveen's digital visiting card. Contact me, connect on social media, or save my contact.">
+  <title>Kemaruban Praveen | Digital Card</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background: #06111d;
+      --card: #0c1d2b;
+      --teal: #28e0c1;
+      --text: #f4f8fc;
+      --muted: #9bafbd;
+      --border: rgba(255, 255, 255, 0.09);
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 28px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #123748 0%, transparent 42%),
+        var(--background);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: linear-gradient(160deg, #102637, var(--card) 55%, #081722);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+    }
+
+    .top-line {
+      height: 5px;
+      background: linear-gradient(90deg, #28e0c1, #5aa7ff, #28e0c1);
+    }
+
+    .content {
+      padding: 30px 23px 25px;
+    }
+
+    .brand {
+      text-align: center;
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 23px;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 17px;
+      border: 2px solid var(--teal);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #173b4a, #0a1723);
+      box-shadow: 0 0 25px rgba(40, 224, 193, 0.13);
+      overflow: hidden;
+      color: var(--teal);
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    /* Replace the placeholder with your photo later if you want. */
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 27px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .location {
+      text-align: center;
+      color: var(--teal);
+      font-size: 12px;
+      margin-top: 11px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 25px 0;
+    }
+
+    .section-title {
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .personal-box {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .birthday-icon {
+      width: 43px;
+      height: 43px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      background: rgba(40, 224, 193, 0.1);
+      font-size: 21px;
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+
+    .value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+    }
+
+    .contact-btn {
+      min-height: 52px;
+      padding: 12px 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .contact-btn:active {
+      transform: scale(0.97);
+      border-color: var(--teal);
+    }
+
+    .contact-btn.primary {
+      grid-column: 1 / -1;
+      background: var(--teal);
+      color: #04151b;
+      border-color: var(--teal);
+      font-weight: 700;
+    }
+
+    .btn-icon {
+      font-size: 18px;
+    }
+
+    .qr-box {
+      text-align: center;
+      padding: 18px 12px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .qr-box img {
+      width: 155px;
+      height: 155px;
+      display: block;
+      margin: 0 auto 13px;
+      padding: 7px;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .qr-heading {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .qr-caption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .action-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin-top: 17px;
+    }
+
+    .action-btn {
+      min-height: 48px;
+      border: 1px solid rgba(40, 224, 193, 0.4);
+      border-radius: 12px;
+      background: rgba(40, 224, 193, 0.08);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      color: #738a99;
+      font-size: 10px;
+      letter-spacing: 1.1px;
+    }
+
+    @media (max-width: 350px) {
+      .content {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .contact-btn {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<main class="card">
-<div class="top"></div>
-<div class="inner">
-<img class="profile" src="profile.jpg" alt="Profile photo of Kemaruban Praveen">
-<div class="kicker">DIGITAL VISITING CARD</div>
-<h1>Kemaruban Praveen</h1>
-<p class="subtitle">Personal profile · Sri Lanka</p>
-<div class="links">
-<a class="btn primary" href="Kemaruban_Praveen.vcf" download>＋ Save Contact</a>
-<a class="btn" href="tel:+94770841987">☎ Call +94770841987</a>
-<a class="btn" href="https://wa.me/94770841987" target="_blank" rel="noopener">WhatsApp</a>
-<a class="btn" href="https://www.instagram.com/praveen04_2007?psln=em14cWI3M2lhZHFm" target="_blank" rel="noopener">Instagram</a>
-<a class="btn" href="https://www.facebook.com/share/1Gvh42V4pA/" target="_blank" rel="noopener">Facebook</a>
-</div>
-<p class="note">Scan the QR code to open this card once it is hosted online.</p>
-</div>
-</main>
+  <main class="card">
+    <div class="top-line"></div>
+
+    <div class="content">
+      <div class="brand">Digital Visiting Card</div>
+
+      <div class="avatar" id="avatar">
+        <span>KP</span>
+      </div>
+
+      <h1>Kemaruban Praveen</h1>
+      <p class="subtitle">Personal Digital Card</p>
+      <p class="location">📍 Jaffna, Sri Lanka</p>
+
+      <div class="divider"></div>
+
+      <!-- Only personal detail shown here is birthday -->
+      <section>
+        <h2 class="section-title">Personal Details</h2>
+
+        <div class="personal-box">
+          <div class="birthday-icon">🎂</div>
+          <div>
+            <span class="label">Date of Birth</span>
+            <div class="value">11 December 2007</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2 class="section-title">Contact & Social</h2>
+
+        <div class="contact-grid">
+          <a class="contact-btn primary"
+             href="https://wa.me/94770841987"
+             target="_blank" rel="noopener">
+            <span class="btn-icon">☘</span>
+            WhatsApp Me
+          </a>
+
+          <a class="contact-btn" href="tel:+94770841987">
+            <span class="btn-icon">📞</span>
+            Call Me
+          </a>
+
+          <a class="contact-btn"
+             href="mailto:kemarubanpraveen@gmail.com">
+            <span class="btn-icon">✉️</span>
+            Email Me
+          </a>
+
+          <a class="contact-btn"
+             href="https://www.instagram.com/praveen04_2007?vrfl=em14cWI3M2lhZHFm"
+             target="_blank" rel="noopener">
+            <span class="btn-icon">📸</span>
+            Instagram
+          </a>
+
+          <a class="contact-btn"
+             href="https://www.facebook.com/share/18HhTd3jgX/"
+             target="_blank" rel="noopener">
+            <span class="btn-icon">👤</span>
+            Facebook
+          </a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <h2 class="section-title">Scan My Card</h2>
+
+        <div class="qr-box">
+          <img
+            id="qrCode"
+            alt="QR code for my digital visiting card"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpraveen20071112.github.io%2Fpraveen-digital-card%2F">
+
+          <p class="qr-heading">My Digital Visiting Card</p>
+          <p class="qr-caption">
+            Scan this QR code to open my contact card.
+          </p>
+        </div>
+
+        <div class="action-buttons">
+          <button class="action-btn" id="saveContact">
+            ＋ Save Contact
+          </button>
+
+          <button class="action-btn" id="shareCard">
+            ↗ Share Card
+          </button>
+        </div>
+      </section>
+
+      <div class="footer">
+        CONNECT • SAVE • SHARE
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const contact = {
+      name: "Kemaruban Praveen",
+      phone: "+94770841987",
+      email: "kemarubanpraveen@gmail.com",
+      address: "Jaffna, Sri Lanka",
+      website: "https://praveen20071112.github.io/praveen-digital-card/",
+      birthday: "20071211"
+    };
+
+    // Generate QR from the current website address.
+    const qrImage = document.getElementById("qrCode");
+    qrImage.src =
+      "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+      encodeURIComponent(window.location.href);
+
+    // Save contact as a vCard file.
+    document.getElementById("saveContact").addEventListener("click", function () {
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:" + contact.name,
+        "TEL;TYPE=CELL:" + contact.phone,
+        "EMAIL:" + contact.email,
+        "ADR;TYPE=HOME:;;" + contact.address + ";;;;",
+        "BDAY:" + contact.birthday,
+        "URL:" + contact.website,
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcard], {
+        type: "text/vcard;charset=utf-8"
+      });
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Kemaruban-Praveen.vcf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // Share the live website.
+    document.getElementById("shareCard").addEventListener("click", async function () {
+      const shareData = {
+        title: "Kemaruban Praveen - Digital Card",
+        text: "Here is my digital visiting card.",
+        url: contact.website
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            copyWebsiteLink();
+          }
+        }
+      } else {
+        copyWebsiteLink();
+      }
+    });
+
+    function copyWebsiteLink() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(contact.website)
+          .then(function () {
+            alert("Website link copied!");
+          })
+          .catch(function () {
+            window.prompt("Copy your digital card link:", contact.website);
+          });
+      } else {
+        window.prompt("Copy your digital card link:", contact.website);
+      }
+    }
+  </script>
 </body>
 </html>
